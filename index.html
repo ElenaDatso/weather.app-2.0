@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;400;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="ceiling"></div>
+    <div class="container">
+        <div class="app-wrap">
+           <div class="weather-app">
+            <h1 class="logo">THE WEATHER APP</h1>
+            <form class="city-search-form" id="search">
+                <div class="row">
+                    <div class="col-xxl-6 col-12 col-md-6 ">
+                        <input type="search" class="city-search-form city-search-form__type-here" name="city" id="search-input" autofocus="on" placeholder="Search for the city here" autocomplete="off">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <input type="submit" value="Search" class="city-search-form city-search-form__submit" id="search-submit">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <button type="submit" value="Get my location" class="city-search-form city-search-form__my-cur-city" id="get-location">Get my location</button>
+                    </div>
+                </div>
+            </form>
+            <div class="main-data">
+                <h3 class="current-city-name" id="the-city">
+                    
+                </h3>
+                <p class="current-date">
+                    <span class="current-date__weekday" id="week-day"></span> <span class="current-date__hour" id="hours"></span><span class="current-date__dots" id="dots">:</span><span class="current-date__minutes" id="minutes"></span>
+                </p>
+                <p class="current-weather" id="weather-status">
+                    
+                </p>
+            </div>
+            <div class="row temperature-wrap">
+                <div class="col-12 col-md-7 col-sm-7">
+                    <div class="weather-temperature row justify-content-start">
+                        <div class="weather-temperature weather-temperature__weather-icon col justify-content-start" >
+                            <img id="weather-icon">
+                        </div>
+                        <div class="current-temperature col">
+                            <div class="current-temperature__wrap row">
+                                <p id="current-temp" class="current-temperature current-temperature__value  col-xxl-3 col-xl-4 col-lg-6 col-md-9 col-sm-9">
+                                
+                                </p>
+                                <div class="current-temperature current-temperature__units col-1">
+                                    <p id="C" class="current-temperature current-temperature__units_celcium col-1 current-temperature__units_active">
+                                    °C
+                                    </p>
+                                    <p id="F" class="current-temperature current-temperature__units_farengeit col-1">
+                                    °F
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="humidity-wind col">
+                        <p class="humidity-wind__humidity" id="humidity">
+                            Humidity: 93%
+                        </p>
+                        <p class="humidity-wind__wind" id="wind">
+                            Wind: 5km/h
+                        </p>
+                    </div>
+                </div>                
+            </div> 
+             <div class="weather-forecast row" id="forecast">
+                
+                    
+                
+             </div>        
+           </div>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>
